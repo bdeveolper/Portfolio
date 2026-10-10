@@ -23,12 +23,20 @@
             --glow-color-strong: rgba(79, 168, 232, 0.8);
         }
 
+        /* Prevent Horizontal Overflow on Mobile */
+        html, body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden !important;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: 'Cairo', 'Plus Jakarta Sans', sans-serif;
             background-color: #f4f6fa;
             color: var(--navy-dark);
             line-height: 1.8;
-            overflow-x: hidden;
         }
 
         /* Navbar */
@@ -601,7 +609,7 @@
         </div>
     </section>
 
-    <!-- Interactive Animated Responsive Testimonials Slider with Arrows Section -->
+    <!-- Interactive Animated Responsive Testimonials Slider (3 Feedback Cards, 1 per slide for smooth mobile/desktop sliding) -->
     <section id="feedback" style="background-color: var(--light-bg);">
         <div class="container position-relative px-md-5">
             <h2 class="text-center section-title" data-ar="ماذا يقول عملاؤنا عن خدماتنا؟" data-en="What Our Clients Say">ماذا يقول عملاؤنا عن خدماتنا؟</h2>
@@ -609,11 +617,10 @@
             <div id="feedbackCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
                 <div class="carousel-inner pb-5">
                     
-                    <!-- Slide 1 (Cards 1, 2, 3) -->
+                    <!-- Slide 1 (Card 1) -->
                     <div class="carousel-item active">
-                        <div class="row g-4">
-                            <!-- Card 1 -->
-                            <div class="col-lg-4 col-md-6">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8 col-md-10">
                                 <div class="card-wrapper">
                                     <div class="card feedback-card d-flex flex-column justify-content-between">
                                         <div>
@@ -623,7 +630,7 @@
                                                 </div>
                                                 <i class="fa-solid fa-quote-left fs-3 text-muted opacity-25"></i>
                                             </div>
-                                            <p class="text-muted mb-4 fs-6" data-ar="سيستم ERP المقاولات غير شكل الإدارة المالية لدينا بالكامل. أصبحنا نتابع المستخلصات وحسابات المقاولين بدقة متناهية." data-en="The Construction ERP transformed our financial workflow completely. Tracking claims and direct costs is seamless.">
+                                            <p class="text-muted mb-4 fs-6" data-ar="والله أنا شهادتي مجروحة كفاية زوقكم ف التعامل والله بجد سيستم محترم كفاية انكم استحملتو التعديلات بس بجد شكراً والله 💙." data-en="The Construction ERP transformed our financial workflow completely. Tracking claims and direct costs is seamless.">
                                                 والله أنا شهادتي مجروحة كفاية زوقكم ف التعامل والله
 بجد سيستم محترم كفاية انكم استحملتو التعديلات
 بس بجد شكراً والله 💙.
@@ -639,8 +646,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Card 2 -->
-                            <div class="col-lg-4 col-md-6 d-none d-md-block">
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 (Card 2) -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8 col-md-10">
                                 <div class="card-wrapper">
                                     <div class="card feedback-card d-flex flex-column justify-content-between">
                                         <div>
@@ -650,7 +662,7 @@
                                                 </div>
                                                 <i class="fa-solid fa-quote-left fs-3 text-muted opacity-25"></i>
                                             </div>
-                                            <p class="text-muted mb-4 fs-6" data-ar="فريق B Developer قدم لنا منصة إيكومرس ممتازة وتطبيق سريع جداً. المبيعات تضاعفت ودعمهم الفني بعد التسليم ممتاز." data-en="B Developer delivered an outstanding e-commerce app and web platform. Our sales doubled and support is top-notch.">
+                                            <p class="text-muted mb-4 fs-6" data-ar="الموقع بصراحه حاجة محترمه و كل اللي كنت محتاجه حضراتكم يعني مشكورين ضفته ف الموقع ف دي حاجة بالنسبالي كويسه جدا و الشباب بيتابعو معايا ديما بصراحه بالتوفيق للجميع" data-en="B Developer delivered an outstanding e-commerce app and web platform. Our sales doubled and support is top-notch.">
                                                الموقع بصراحه حاجة محترمه و كل اللي كنت محتاجه حضراتكم يعني مشكورين ضفته ف الموقع ف دي حاجة بالنسبالي كويسه جدا
 و الشباب بيتابعو معايا ديما بصراحه بالتوفيق للجميع
                                             </p>
@@ -665,8 +677,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Card 3 -->
-                            <div class="col-lg-4 d-none d-lg-block">
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 (Card 3) -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8 col-md-10">
                                 <div class="card-wrapper">
                                     <div class="card feedback-card d-flex flex-column justify-content-between">
                                         <div>
@@ -676,7 +693,7 @@
                                                 </div>
                                                 <i class="fa-solid fa-quote-left fs-3 text-muted opacity-25"></i>
                                             </div>
-                                            <p class="text-muted mb-4 fs-6" data-ar="نظام إدارة السنتر التعليمي حل كل مشاكل تنظيم الحصص ونسب المدرسين. توفير كبير في الوقت والمجهود الإداري." data-en="The Educational Center ERP solved all group scheduling and automated teacher shares. Saved us immense time.">
+                                            <p class="text-muted mb-4 fs-6" data-ar="و الله هو السيستم بصراحه سهل عليا كل حاجة ف الشغل و كمان موضوع الشات اللي بسألو عن أي حاجة ف السيستم دة جامد لما الباشمهندس باسم قالي هنعمله ف السيستم علشان لو احتجت حاجة تقدر تسألو طلع فعلاً مفيد انا بتناقش معاه بصراحه انا مبسوط جدا بالسيستم دة تسلمو والله خصوصاً أن التيم كله بيساعدني فعلاً يعني ف فترة التجربة كان كل يوم بيتواصلو معایه و لو في اي حاجة بصراحه بيهتمو و بتتحل بسرعه شكرا ي باشمهندسه" data-en="The Educational Center ERP solved all group scheduling and automated teacher shares. Saved us immense time.">
                                                و الله هو السيستم بصراحه سهل عليا كل حاجة ف الشغل
 و كمان موضوع الشات اللي بسألو عن أي حاجة ف السيستم دة جامد لما الباشمهندس باسم قالي هنعمله ف السيستم علشان لو احتجت حاجة تقدر تسألو طلع فعلاً مفيد انا بتناقش معاه 
 بصراحه انا مبسوط جدا بالسيستم دة تسلمو والله خصوصاً أن التيم كله بيساعدني فعلاً يعني ف فترة التجربة كان كل يوم بيتواصلو معایه و لو في اي حاجة بصراحه بيهتمو و بتتحل بسرعه شكرا ي باشمهندسه
@@ -695,11 +712,13 @@
                         </div>
                     </div>
 
+                </div>
 
-                <!-- Carousel Indicators Dots -->
+                <!-- Carousel Indicators Dots (3 Dots) -->
                 <div class="carousel-indicators mb-0">
                     <button type="button" data-bs-target="#feedbackCarousel" data-bs-slide-to="0" class="active"></button>
                     <button type="button" data-bs-target="#feedbackCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#feedbackCarousel" data-bs-slide-to="2"></button>
                 </div>
 
                 <!-- Manual Navigation Next / Prev Arrow Buttons -->
